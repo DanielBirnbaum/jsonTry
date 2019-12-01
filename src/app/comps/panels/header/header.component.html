@@ -1,0 +1,18 @@
+<p>header works!</p>
+<div>
+        <ul class="navy">
+          <!-- <li><a class="active" (click)="location.location ='users'">users</a></li> -->
+          <li><a class="active" routerLink ='homepage'>home</a></li>
+          <li><a routerLink="users">users</a></li>
+          <li><a routerLink="posts">posts</a></li>
+          <li><a routerLink="albums">albums</a></li>
+          <li><a routerLink="todos">todos</a></li>
+          <li style="float:right"><a>Hello: {{location.logUser}}</a></li>
+          <li style="float:right"><a>back</a></li>
+          <select required [(ngModel)]="location.id" style="float:right" class="margin">
+                <option selected="selected" disabled>select A user</option>
+                <option *ngFor="let user of userSvc.users " [value]="user.id">{{ user.name }}</option>
+              </select>
+        </ul>
+      </div>
+      

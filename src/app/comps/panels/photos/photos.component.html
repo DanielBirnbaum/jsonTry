@@ -1,0 +1,12 @@
+<p>photos works!</p>
+<div>
+        <h1></h1>
+        <ul class="panel-list">
+            
+            <li *ngFor="let p of photoSvc.photos"  >
+                <app-photo [photo]="p"></app-photo>
+            </li>
+        </ul>  
+    </div>
+    
+    

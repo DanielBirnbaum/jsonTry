@@ -1,0 +1,24 @@
+<div>
+    <h1>select a user</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>name</th>
+            <th>username</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+            
+                <app-user [user]="u" *ngFor="let u of userSvc.users"></app-user>
+            
+ <router-outlet></router-outlet>
+ <li><a routerLink="./posts">posts</a></li>
+ <li><a routerLink="./albums">albums</a></li>
+ <li><a routerLink="./todos">todos</a></li>
+ 
+        
+    </tbody>
+
+    </table>
+</div>

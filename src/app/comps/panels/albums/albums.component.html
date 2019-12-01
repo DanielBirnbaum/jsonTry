@@ -1,0 +1,12 @@
+<div>
+    <h1>select a album</h1>
+    <ul class="panel-list">
+        <li *ngFor="let a of albumSvc.albums" (click)="selectAlbum(a)">
+            <app-album [album]="a"></app-album>
+        </li>
+    </ul>
+</div>
+
+
+
+

@@ -1,0 +1,12 @@
+
+<div>
+        <h1>select a todo</h1>
+        <ul class="panel-list">
+            
+            <li *ngFor="let t of todoSvc.todos">
+                <app-todo [todo]='t'></app-todo>
+            </li>
+        </ul>  
+    </div>
+    
+    

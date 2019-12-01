@@ -1,0 +1,10 @@
+<div>
+    <h1>select a post</h1>
+    <ul class="panel-list">
+        
+        <li *ngFor="let p of postSvc.posts" (click)="selectPost('comments',p)" >
+            <app-post [post]="p"></app-post>
+        </li>
+    </ul>  
+</div>
+

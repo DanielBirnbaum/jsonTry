@@ -1,0 +1,11 @@
+<div>
+        <h1></h1>
+        <ul class="panel-list">
+            
+            <li *ngFor="let c of commentSvc.comments"  >
+                <app-comment [comment]="c"></app-comment>
+            </li>
+        </ul>  
+    </div>
+    
+    

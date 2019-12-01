@@ -1,0 +1,25 @@
+<p>homepage works!</p>
+
+<br>
+<div class="run">
+  <ul>
+    <li *ngFor="let p of photos" class="slid ">
+      <img src={{p.url}}>
+    </li>
+  </ul>
+</div>
+<br>
+<div>
+  <ul>
+    <li *ngFor="let p of posts">
+      <a class="font"> {{p.title}}</a>
+      <ul *ngFor="let c of p.comments">
+        <li>{{c.name}}<br>
+          {{c.body}}<br>
+          {{c.email}}<br>
+
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

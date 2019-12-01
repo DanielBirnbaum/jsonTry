@@ -1,0 +1,36 @@
+<p>new-form works!</p>
+<div>
+    <form >
+<label ><input [formControl]="name"></label><br>
+<label ><input [formControl]="phone"></label><br>
+<button type="button" (click)='addRow()'>add</button>
+    </form>
+   
+    <table border="1">
+        <tr>
+            <td>name</td>
+            <td>phone</td>
+        </tr>
+        <tr *ngFor='let r of newRows'>
+            <td>{{r.name}}</td>
+            <td>{{r.phone}}</td>
+        </tr>
+
+    </table>
+</div>
+
+<div>
+    my email:<input [formControl]="blablagmail"><br>
+    <button type="button" (click)='chengeEmail()'>chenge</button><br>
+new email:{{blablagmail.value}}
+</div>
+
+<div>
+    <form [formgrop]="contact" (ngSubmit)='addToContacts()'>
+            <label >name<input type="text" formControlName='name'></label><br>
+            <label >phone<input type="text" formControlName='phone'></label><br>
+            <label >text<input type="text" formControlName='text'></label><br>
+            <label >whatsapp<input type="checkbox" formControlName='whatsapp'></label><br>
+            <button>add</button>
+    </form>
+</div>
